@@ -1,6 +1,8 @@
 ## 目录
 * [简介](#intro)
 * [生命周期](#lifecircle)
+* [模板(template)部分](#template)
+* [script部分](#script)
 * [组件](#components)  
   * [父向子传递数据](#c-dataFlow1)  
   * [子向传递数据](#c-dataFlow2)
@@ -50,6 +52,25 @@
 
 **destroyed:**  
 Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。 该钩子在服务器端渲染期间不被调用。
+
+<span id="teamplate"></span>
+### 模板(template)部分
+[模板语法官方传送口](https://cn.vuejs.org/v2/guide/syntax.html)
+##### 1.通过v-bind,v-on,及双大括号({{ msg }})语法将script部分的数据或事件回调绑定到模板部分  
+*备注：<br>v-bind可简写为':' --- **v-bind:id="data"** 等于 **:id="data"**<br>v-on可简写为'@' --- **v-on:click="handleClick"** 等于 **@click="handleClick"**
+
+##### 2.关于slot(插槽)  
+[slot官方传送口](https://cn.vuejs.org/v2/guide/components-slots.html)
+
+<span id="script"></span>
+### script部分
+*.vue文件的script部分最终导出的是一个对象*  
+常用的属性如下  
+**data**,**computed**  
+**methods**  
+**components**  
+**生命周期的钩子**
+
 
 <span id="components"></span>
 ### 组件
